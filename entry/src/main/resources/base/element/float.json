@@ -1,0 +1,24 @@
+{
+  "float": [
+    {
+      "name": "text_size",
+      "value": "25vp"
+    },
+    {
+      "name": "button_padding",
+      "value": "10vp"
+    },
+    {
+      "name": "button_top_margin",
+      "value": "50vp"
+    },
+    {
+      "name": "instalike_view_height",
+      "value": "300vp"
+    },
+    {
+      "name": "instalike_image_size",
+      "value": "300vp"
+    }
+  ]
+}

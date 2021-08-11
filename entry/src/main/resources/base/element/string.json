@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "app_name",
+      "value": "InstLikeView"
+    },
+    {
+      "name": "animate",
+      "value": "ANIMATE"
+    },
+    {
+      "name": "set_image",
+      "value": "SET IMAGE"
+    },
+    {
+      "name": "set_red",
+      "value": "Color RED set successfully..!!"
+    },
+    {
+      "name": "set_green",
+      "value": "Color GREEN set successfully..!!"
+    },
+    {
+      "name": "set_blue",
+      "value": "Color BLUE set successfully..!!"
+    },
+    {
+      "name": "image_toast",
+      "value": "Image set successfully !!"
+    },
+    {
+      "name": "vector_toast",
+      "value": "Vector set successfully !!"
+    }
+  ]
+}

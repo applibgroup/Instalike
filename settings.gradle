@@ -1,1 +1,1 @@
-include ':sample', ':instalike'
+include ':entry', ':instalike'
