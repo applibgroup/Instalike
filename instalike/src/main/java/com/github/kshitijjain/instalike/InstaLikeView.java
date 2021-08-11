@@ -10,6 +10,7 @@ import ohos.agp.components.element.Element;
 import ohos.agp.components.element.ElementScatter;
 import ohos.agp.render.ColorMatrix;
 import ohos.app.Context;
+import com.github.kshitijjain.instalike.utils.ResourceUtil;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -17,6 +18,7 @@ import java.util.TimerTask;
  * Created by flash on 17/3/17.
  */
 public class InstaLikeView extends DependentLayout {
+    private static final String TAG = "InstaLikeView";
     private static final String LIKE_SRC = "likeSrc";
     private static final String LIKE_SIZE = "likeSize";
     private static final int START_ANIM_DURATION = 400;
@@ -24,7 +26,6 @@ public class InstaLikeView extends DependentLayout {
     private static final int TOTAL_DURATION = 800;
     private static final float FLOAT_ZERO = 0f;
     private static final float FLOAT_ONE = 1f;
-    private static final int DEFAULT_SIZE = 100;
     private Image mImageHeart;
 
     public InstaLikeView(Context context) {
@@ -44,7 +45,7 @@ public class InstaLikeView extends DependentLayout {
 
     private void init(Context context, AttrSet attrs) {
         mImageHeart = new Image(context);
-        int likeSize = DEFAULT_SIZE;
+        int likeSize = (int) ResourceUtil.getFloat(context, TAG, ResourceTable.Float_like_size);
         Element likeSrc = ElementScatter.getInstance(context).parse(ResourceTable.Graphic_img_heart);
         if (attrs != null) {
             boolean isLikeSizePresent = attrs.getAttr(LIKE_SIZE).isPresent();
