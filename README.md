@@ -1,96 +1,69 @@
+[![.github/workflows/main.yml](https://github.com/applibgroup/Instalike/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/Instalike/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Instalike&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Instalike)
 # InstaLikeView
-[![](https://jitpack.io/v/Kshitij-Jain/InstaLikeView.svg)](https://jitpack.io/#Kshitij-Jain/InstaLikeView)
 
-A simple library to add like animation similar to instagram.
+A HMOS library to add "like" animation similar to instagram.
 
-<img src="https://github.com/Kshitij-Jain/InstaLikeView/blob/master/screenshots/video.gif" width="256">
+<img src="https://github.com/Kshitij-Jain/InstaLikeView/blob/master/screenshots/instalikeview.gif" width="256">
 
-### Download
-
-#### Step 1. Add the JitPack repository to your build file
-
-##### Gradle
-
-Add it in your root build.gradle at the end of repositories:
-
+## Dependency
+1.For using instalike module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
+```groovy
+	dependencies {
+		implementation project(':instalike')
+                implementation fileTree(dir: 'libs', include: ['*.har'])
+                testImplementation 'junit:junit:4.13'
+	}
 ```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-```
-
-##### **Maven**
-
-```
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
-
-#### **Step 2.** Add the dependency
-
-##### Gradle
-
-```
-dependencies{
-    compile 'com.github.Kshitij-Jain:InstaLikeView:1.05'
-}
-
-```
-
-##### Maven
-
-```
-<dependency>
-    <groupId>com.github.Kshitij-Jain</groupId>
-    <artifactId>InstaLikeView</artifactId>
-    <version>1.05</version>
-</dependency>
+2.For using instalike in separate application using har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file.
+```groovy
+	dependencies {
+		implementation fileTree(dir: 'libs', include: ['*.har'])
+		testImplementation 'junit:junit:4.13'
+	}
 ```
 
 ### Usage
 
 #### Include following code in your layout:
 
-```
-<com.github.kshitij_jain.instalike.InstaLikeView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:likeColor="@color/colorPrimaryDark"
-        app:likeSize="128dp"
-        app:likeSrc="@drawable/img_heart"
-        android:id="@+id/insta_like_view"/>
+```xml
+<com.github.kshitijjain.instalike.InstaLikeView
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="20vp"
+        ohos:bottom_margin="30vp"
+        ohos:layout_alignment="center"
+        ohos:id="$+id:instalikeview"
+        app:likeSrc="$graphic:img_heart"
+        app:likeSize="$float:instalike_image_size" />
 ```
 
 #### Include following code in your activity:
 
-```
-InstaLikeView mInstaLikeView = (InstaLikeView) findViewById(R.id.insta_like_view);
+```java
+InstaLikeView instaLikeView = (InstaLikeView) findComponentById(ResourceTable.Id_instalikeview);
 // To start animation
-mInstaLikeView.start();
+instaLikeView.start();
 ```
 ##### Supported xml attributes:
-```
- app:likeColor="@color/colorPrimary" // Set Like Color
- app:likeSize="@dimen/likeDimension" // Set Like Size (Default 80dp)
+```xml
+ app:likeSize="$float:instalike_image_size" // Set Like Size (Default 80vp)
  app:likeSrc="@drawable/img_burger" // Set Like Drawable
  ``` 
 
 ##### Other supported methods:
 
-```
+```java
 mInstaLikeView.start(); // Start Animation
-mInstaLikeView.setLikeResource(R.drawable.img_burger); // Set Like Drawable
-mInstaLikeView.setLikeDrawable(ContextCompat.getDrawable(this, R.drawable.img_burger)); // Set Like Drawable
-mInstaLikeView.setLikeColor(ContextCompat.getColor(this, R.color.colorAccent)); // Set Like Color
+instaLikeView.setLikeResource(ResourceTable.Media_icon); // Set Like Drawable
+instaLikeView.setLikeDrawable(ElementScatter.getInstance(MainAbilitySlice.this).parse(ResourceTable.Graphic_img_heart)); // Set Like Drawable
+instaLikeView.setLikeColor(colorMatrix); // Set Like Color
 ``` 
+
+#### Future Work:
+Since there is no alternate api for setColorFilter in HMOS platform, custom attribute - "app:likeColor" is currently not supported. As a result, user needs to call the setter function instaLikeView.setLikeColor(colorMatrix) and pass a colorMatrix as an argument which will internally call setColorMatrix(colorMatrix) to change the color of the drawable. Once HMOS platform supports setColorFilter, then this custom attribute can be included.
+
 
 ### License
 ```
