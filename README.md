@@ -1,13 +1,19 @@
-[![.github/workflows/main.yml](https://github.com/applibgroup/Instalike/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/Instalike/actions/workflows/main.yml)
+[![Build](https://github.com/applibgroup/Instalike/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/Instalike/actions/workflows/main.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Instalike&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Instalike)
 # InstaLikeView
 
 A HMOS library to add "like" animation similar to instagram.
 
+## Source
+Inspired by [KshitijDroid/InstaLikeView](https://github.com/KshitijDroid/InstaLikeView) - version 1.05
+
+## Feature
+This library provides an animation similar to instagram "like" feature.
+
 <img src="https://github.com/applibgroup/Instalike/blob/master/screenshots/instalikeview.gif" width="256">
 
 ## Dependency
-1.For using instalike module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
+1. For using instalike module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
 ```groovy
 	dependencies {
 		implementation project(':instalike')
@@ -15,7 +21,7 @@ A HMOS library to add "like" animation similar to instagram.
                 testImplementation 'junit:junit:4.13'
 	}
 ```
-2.For using instalike in separate application using har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file.
+2. For using instalike in separate application using har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file.
 ```groovy
 	dependencies {
 		implementation fileTree(dir: 'libs', include: ['*.har'])
@@ -49,7 +55,7 @@ instaLikeView.start();
 #### Supported xml attributes:
 ```xml
  app:likeSize="$float:instalike_image_size" // Set Like Size (Default 80vp)
- app:likeSrc="@drawable/img_burger" // Set Like Drawable
+ app:likeSrc="$graphic:img_heart" // Set Like Drawable
  ``` 
 
 #### Other supported methods:
