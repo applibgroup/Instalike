@@ -23,7 +23,7 @@ A HMOS library to add "like" animation similar to instagram.
 	}
 ```
 
-### Usage
+## Usage
 
 #### Include following code in your layout:
 
@@ -46,13 +46,13 @@ InstaLikeView instaLikeView = (InstaLikeView) findComponentById(ResourceTable.Id
 // To start animation
 instaLikeView.start();
 ```
-##### Supported xml attributes:
+#### Supported xml attributes:
 ```xml
  app:likeSize="$float:instalike_image_size" // Set Like Size (Default 80vp)
  app:likeSrc="@drawable/img_burger" // Set Like Drawable
  ``` 
 
-##### Other supported methods:
+#### Other supported methods:
 
 ```java
 mInstaLikeView.start(); // Start Animation
@@ -61,11 +61,11 @@ instaLikeView.setLikeDrawable(ElementScatter.getInstance(MainAbilitySlice.this).
 instaLikeView.setLikeColor(colorMatrix); // Set Like Color
 ``` 
 
-#### Future Work:
+## Future Work
 Since there is no alternate api for setColorFilter in HMOS platform, custom attribute - "app:likeColor" is currently not supported. As a result, user needs to call the setter function instaLikeView.setLikeColor(colorMatrix) and pass a colorMatrix as an argument which will internally call setColorMatrix(colorMatrix) to change the color of the drawable. Once HMOS platform supports setColorFilter, then this custom attribute can be included.
 
 
-### License
+## License
 ```
 Copyright 2017 Kshitij Jain
 
