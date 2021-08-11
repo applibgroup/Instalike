@@ -4,7 +4,7 @@
 
 A HMOS library to add "like" animation similar to instagram.
 
-<img src="https://github.com/Kshitij-Jain/InstaLikeView/blob/master/screenshots/instalikeview.gif" width="256">
+<img src="https://github.com/applibgroup/Instalike/blob/master/screenshots/instalikeview.gif" width="256">
 
 ## Dependency
 1.For using instalike module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
