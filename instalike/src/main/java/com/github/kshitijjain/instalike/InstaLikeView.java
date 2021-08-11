@@ -104,13 +104,13 @@ public class InstaLikeView extends DependentLayout {
                             @Override
                             public void run() {
                                 getContext().getUITaskDispatcher().asyncDispatch(() -> {
-                                        InstaLikeView.this.createAnimatorProperty()
-                                                .scaleXFrom(FLOAT_ONE)
-                                                .scaleX(FLOAT_ZERO)
-                                                .scaleYFrom(FLOAT_ONE)
-                                                .scaleY(FLOAT_ZERO)
-                                                .setDuration(END_ANIM_DURATION)
-                                                .start();
+                                    InstaLikeView.this.createAnimatorProperty()
+                                            .scaleXFrom(FLOAT_ONE)
+                                            .scaleX(FLOAT_ZERO)
+                                            .scaleYFrom(FLOAT_ONE)
+                                            .scaleY(FLOAT_ZERO)
+                                            .setDuration(END_ANIM_DURATION)
+                                            .start();
                                 });
                             }
                         }, TOTAL_DURATION);

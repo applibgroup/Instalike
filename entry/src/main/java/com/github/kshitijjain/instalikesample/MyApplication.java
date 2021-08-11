@@ -18,6 +18,9 @@ package com.github.kshitijjain.instalikesample;
 
 import ohos.aafwk.ability.AbilityPackage;
 
+/**
+ * Application class.
+ */
 public class MyApplication extends AbilityPackage {
     @Override
     public void onInitialize() {
