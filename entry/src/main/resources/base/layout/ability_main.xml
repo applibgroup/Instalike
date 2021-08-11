@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/hap/res-auto"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <com.github.kshitijjain.instalike.InstaLikeView
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:top_margin="20vp"
+        ohos:bottom_margin="30vp"
+        ohos:layout_alignment="center"
+        ohos:id="$+id:instalikeview"
+        app:likeSize="$float:instalike_image_size"
+        />
+
+    <RadioContainer
+        ohos:id="$+id:main_select"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        ohos:bottom_margin="30vp"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:orientation="horizontal">
+
+        <RadioButton
+            ohos:id="$+id:radio_vector"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="20vp"
+            ohos:text="SET VECTOR"
+            ohos:text_size="50vp"/>
+
+        <RadioButton
+            ohos:id="$+id:radio_image"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="20vp"
+            ohos:text="SET IMAGE"
+            ohos:text_size="50vp"/>
+    </RadioContainer>
+
+    <DirectionalLayout
+        ohos:id="$+id:color_layout"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:visibility="hide">
+        <Text
+            ohos:id="$+id:color_prompt"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:left_margin="20vp"
+            ohos:bottom_margin="30vp"
+            ohos:text="Select a color from below"
+            ohos:text_size="40vp"/>
+        <RadioContainer
+            ohos:id="$+id:colorContainer"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:left_margin="20vp"
+            ohos:bottom_margin="30vp"
+            ohos:orientation="horizontal">
+            <RadioButton
+                ohos:id="$+id:color_red"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:left_margin="20vp"
+                ohos:text="RED"
+                ohos:text_size="35vp"/>
+            <RadioButton
+                ohos:id="$+id:color_green"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:left_margin="20vp"
+                ohos:text="GREEN"
+                ohos:text_size="35vp"/>
+            <RadioButton
+                ohos:id="$+id:color_blue"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:left_margin="20vp"
+                ohos:text="BLUE"
+                ohos:text_size="35vp"/>
+        </RadioContainer>
+    </DirectionalLayout>
+    <Button
+        ohos:id="$+id:animate_button"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:button_shape"
+        ohos:text="CLICK TO ANIMATE"
+        ohos:padding="20vp"
+        ohos:layout_alignment="center"
+        ohos:padding_for_text="true"
+        ohos:text_size="35vp"/>
+</DirectionalLayout>
