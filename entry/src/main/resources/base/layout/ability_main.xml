@@ -20,8 +20,6 @@
         ohos:id="$+id:main_select"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
         ohos:bottom_margin="30vp"
         ohos:background_element="$graphic:background_ability_main"
         ohos:orientation="horizontal">
@@ -32,7 +30,7 @@
             ohos:width="match_content"
             ohos:left_margin="20vp"
             ohos:text="SET VECTOR"
-            ohos:text_size="50vp"/>
+            ohos:text_size="20vp"/>
 
         <RadioButton
             ohos:id="$+id:radio_image"
@@ -40,15 +38,14 @@
             ohos:width="match_content"
             ohos:left_margin="20vp"
             ohos:text="SET IMAGE"
-            ohos:text_size="50vp"/>
+            ohos:text_size="20vp"/>
     </RadioContainer>
 
     <DirectionalLayout
         ohos:id="$+id:color_layout"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:orientation="vertical"
-        ohos:visibility="hide">
+        ohos:orientation="vertical">
         <Text
             ohos:id="$+id:color_prompt"
             ohos:height="match_content"
@@ -56,7 +53,7 @@
             ohos:left_margin="20vp"
             ohos:bottom_margin="30vp"
             ohos:text="Select a color from below"
-            ohos:text_size="40vp"/>
+            ohos:text_size="20vp"/>
         <RadioContainer
             ohos:id="$+id:colorContainer"
             ohos:height="match_content"
@@ -68,23 +65,23 @@
                 ohos:id="$+id:color_red"
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:left_margin="20vp"
+                ohos:left_margin="10vp"
                 ohos:text="RED"
-                ohos:text_size="35vp"/>
+                ohos:text_size="25vp"/>
             <RadioButton
                 ohos:id="$+id:color_green"
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:left_margin="20vp"
+                ohos:left_margin="10vp"
                 ohos:text="GREEN"
-                ohos:text_size="35vp"/>
+                ohos:text_size="25vp"/>
             <RadioButton
                 ohos:id="$+id:color_blue"
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:left_margin="20vp"
+                ohos:left_margin="10vp"
                 ohos:text="BLUE"
-                ohos:text_size="35vp"/>
+                ohos:text_size="25vp"/>
         </RadioContainer>
     </DirectionalLayout>
     <Button
@@ -96,5 +93,5 @@
         ohos:padding="20vp"
         ohos:layout_alignment="center"
         ohos:padding_for_text="true"
-        ohos:text_size="35vp"/>
+        ohos:text_size="20vp"/>
 </DirectionalLayout>
