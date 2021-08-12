@@ -62,7 +62,7 @@ instaLikeView.start();
 
 ```java
 mInstaLikeView.start(); // Start Animation
-instaLikeView.setLikeResource(ResourceTable.Media_icon); // Set Like Drawable
+instaLikeView.setLikeResource(ResourceTable.Media_icon); // Set Like Resource
 instaLikeView.setLikeDrawable(ElementScatter.getInstance(MainAbilitySlice.this).parse(ResourceTable.Graphic_img_heart)); // Set Like Drawable
 instaLikeView.setLikeColor(colorMatrix); // Set Like Color
 ``` 

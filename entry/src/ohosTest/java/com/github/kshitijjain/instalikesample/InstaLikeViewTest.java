@@ -75,8 +75,8 @@ public class InstaLikeViewTest {
     @Test
     public void testImageHeartLayoutConfig() {
         instaLikeView = new InstaLikeView(context, attrSet);
-        assertEquals(160, instaLikeView.getImageHeart().getLayoutConfig().width);
-        assertEquals(160, instaLikeView.getImageHeart().getLayoutConfig().height);
+        assertEquals(240, instaLikeView.getImageHeart().getLayoutConfig().width);
+        assertEquals(240, instaLikeView.getImageHeart().getLayoutConfig().height);
     }
 
     @Test
