@@ -28,6 +28,13 @@ This library provides an animation similar to instagram "like" feature.
 		testImplementation 'junit:junit:4.13'
 	}
 ```
+3. For using instalike from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+``` groovy
+         dependencies {
+	         implementation 'dev.applibgroup:instalike:1.0.0'
+	         testCompile 'junit:junit:4.13'
+         }
+```
 
 ## Usage
 
